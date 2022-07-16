@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             buttonColor: Colors.blueAccent[700],
             textTheme: ButtonTextTheme.primary,
           )),
-      home: HomeScreen(),
+      home: Dashboard(),
     );
   }
 }

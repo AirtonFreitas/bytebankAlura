@@ -10,16 +10,16 @@ Future<Database> createDatabase() {
           'id INTEGER PRIMARY KEY, '
           'name TEXT, '
           'account_number INTEGER)');
-    }, version: 1);
+    }, version: 1,
+    );
   });
 }
 
 Future<int> save(Contact contact) {
   return createDatabase().then((db) {
     final Map<String, dynamic> contactMap = Map();
-    contactMap['id'] = contact.id;
     contactMap['name'] = contact.name;
-    contactMap['account_number'] = contact.account;
+    contactMap['account_number'] = contact.accountNumber;
     return db.insert('contacts', contactMap);
   });
 }
